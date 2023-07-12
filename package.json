@@ -4,6 +4,8 @@
   "description": "Merge multiple SCSS files together and display the output to a webserver on localhost",
   "source": "./src/index.html",
   "scripts": {
+    "build": "parcel build output/index.html",
+    "dev": "npm run build && parcel"
   },
   "repository": {
     "type": "git",
