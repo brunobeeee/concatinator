@@ -5,6 +5,10 @@ services:
     build:
       context: .
       target: runner
+    entrypoint:
+      - sh
+      - -c
+      - cd /com.docker.devenvironments.code
     ports:
       - 1234:1234
 
