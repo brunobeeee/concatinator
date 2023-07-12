@@ -1,11 +1,13 @@
 {
-  "name": "scss-merge",
+  "name": "concatinator",
   "version": "1.0.0",
   "description": "Merge multiple SCSS files together and display the output to a webserver on localhost",
-  "source": "./src/index.html",
+  "source": "src/index.html",
   "scripts": {
-    "build": "parcel build output/index.html",
-    "dev": "npm run build && parcel"
+    "build": "parcel build src/index.html",
+    "dev": "concurrently \"npm run concat:watch\" \"parcel\"",
+    "concat": "node src/assets/js/concat.js",
+    "concat:watch": "watch 'npm run concat' ./IO/input"
   },
   "repository": {
     "type": "git",
@@ -18,14 +20,22 @@
     "url": "https://github.com/brunobeeee/scss-merge/issues"
   },
   "homepage": "https://github.com/brunobeeee/scss-merge#readme",
-  "dependencies": {
-  },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.8.3",
     "@parcel/packager-xml": "^2.8.3",
     "@parcel/transformer-sass": "^2.8.3",
     "@parcel/transformer-webmanifest": "^2.8.3",
     "@parcel/transformer-xml": "^2.8.3",
-    "parcel": "^2.8.3"
+    "boostrap": "^2.0.0",
+    "buffer": "^6.0.3",
+    "concurrently": "^8.2.0",
+    "events": "^3.3.0",
+    "merge-files": "^0.1.2",
+    "parcel": "^2.9.3",
+    "process": "^0.11.10",
+    "watch": "^0.13.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.0"
   }
 }

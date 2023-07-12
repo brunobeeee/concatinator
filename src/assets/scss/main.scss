@@ -1,0 +1,43 @@
+@import "abstracts/variables";
+@import "~bootstrap/scss/bootstrap"; 
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    #txt-content {
+      flex: 1 1 200px;
+      padding: 10px 20px;
+      max-width: 1000px;
+      margin: 3em 20px;
+      white-space: pre-wrap;
+      background-color: $info;
+      font-family: monospace, sans-serif;
+      border-radius: .5em;
+    }
+  
+    #copy-button {
+      position: fixed;
+      top: 100px;
+      left: 25px;
+      background-color: $primary;
+      box-shadow: 2px 2px 30px 10px $light;
+      color: white;
+      border: none;
+      border-radius: .5em;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $secondary;
+      }
+      &:active {
+        background-color: $primary;
+      }
+    }
+  }
+  
