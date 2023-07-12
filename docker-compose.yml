@@ -14,3 +14,7 @@ services:
       - websrv-out:/usr/share/nginx/html/output.scss
     ports:
       - 8000:80
+
+volumes:
+  scss:
+  websrv-out:
