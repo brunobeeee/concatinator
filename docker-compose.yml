@@ -1,0 +1,16 @@
+version: '3'
+services:
+  scss-merge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - scss:/app/scss
+    command: npm start
+
+  webserver:
+    image: nginx:latest
+    volumes:
+      - websrv-out:/usr/share/nginx/html/output.scss
+    ports:
+      - 8000:80
