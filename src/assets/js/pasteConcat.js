@@ -1,16 +1,16 @@
-// Pfad zur TXT-Datei
+// path to text
 const txtFilePath = 'concat-result.txt';
 
-// HTML-Element, in das der Inhalt der TXT-Datei eingefügt werden soll
+// find the txt div
 const txtContentElement = document.getElementById('txt-content');
 
-// Funktion zum Laden und Aktualisieren des Dateiinhalts
+// load txt file content and check if it changed
 function loadAndUpdateTxtContent() {
   fetch(txtFilePath)
     .then(response => response.text())
     .then(txtContent => {
       if (txtContentElement.innerText !== txtContent) {
-        // Der Dateiinhalt hat sich geändert, aktualisiere das HTML-Element
+        // file content changed -> write it into the txt div
         txtContentElement.innerText = txtContent;
       }
     })
@@ -19,11 +19,10 @@ function loadAndUpdateTxtContent() {
     });
 }
 
-// Intervall für die periodische Überprüfung in Millisekunden (z.B. alle 5 Sekunden)
+// intervall
 const refreshInterval = 5000;
 
-// Initialer Aufruf der Funktion
 loadAndUpdateTxtContent();
 
-// Periodische Aktualisierung des Dateiinhalts
+// periodic refreshing of the content
 setInterval(loadAndUpdateTxtContent, refreshInterval);
