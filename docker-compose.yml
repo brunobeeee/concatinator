@@ -6,15 +6,9 @@ services:
       dockerfile: Dockerfile
     volumes:
       - scss:/app/scss
-    command: npm start
-
-  webserver:
-    image: nginx:latest
-    volumes:
-      - websrv-out:/usr/share/nginx/html/output.scss
     ports:
-      - 8000:80
+      - 1234:1234
+    command: npm start
 
 volumes:
   scss:
-  websrv-out:
