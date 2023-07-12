@@ -1,0 +1,29 @@
+{
+  "name": "scss-merge",
+  "version": "1.0.0",
+  "description": "Merge multiple SCSS files together and display the output to a webserver on localhost",
+  "source": "./src/index.html",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunobeeee/scss-merge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunobeeee/scss-merge/issues"
+  },
+  "homepage": "https://github.com/brunobeeee/scss-merge#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.8.3",
+    "@parcel/packager-xml": "^2.8.3",
+    "@parcel/transformer-sass": "^2.8.3",
+    "@parcel/transformer-webmanifest": "^2.8.3",
+    "@parcel/transformer-xml": "^2.8.3",
+    "parcel": "^2.8.3"
+  }
+}
