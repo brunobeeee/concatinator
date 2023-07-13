@@ -1,42 +1,42 @@
 @import "abstracts/variables";
 @import "~bootstrap/scss/bootstrap"; 
+@import "~@fontsource/jost/scss/mixins.scss";
+
+:root{
+    --bs-body-font-family: 'Jost', 'Avenir', sans-serif;
+}
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    #txt-content {
-      flex: 1 1 200px;
+    background-color: $dark;
+    h1 {
+      color: $light;
+    }
+
+    .wrapper {
+      background-color: $light;
+      border-radius: .5em;
+      margin: 3em auto;
       padding: 10px 20px;
       max-width: 1000px;
-      margin: 3em 20px;
-      white-space: pre-wrap;
-      background-color: $info;
-      font-family: monospace, sans-serif;
-      border-radius: .5em;
-    }
-  
-    #copy-button {
-      position: fixed;
-      top: 100px;
-      left: 25px;
-      background-color: $primary;
-      box-shadow: 2px 2px 30px 10px $light;
-      color: white;
-      border: none;
-      border-radius: .5em;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 16px;
-      cursor: pointer;
-
+      flex: 1 1 200px;
+      position: relative;
       &:hover {
-        background-color: $secondary;
+        cursor: pointer;
       }
       &:active {
-        background-color: $primary;
+        background-color: rgba($light,.75);
+      }
+
+      .copy-button {
+        position: absolute;
+        right: 10px;
+        color: $muted;
+      }
+
+      #txt-content {
+        color: $dark;
+        white-space: pre-wrap;
+        font-family: "Menlo", monospace, sans-serif;
       }
     }
   }

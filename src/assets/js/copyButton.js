@@ -7,7 +7,3 @@ function copyToClipboard() {
     document.execCommand("copy");
     document.body.removeChild(elem);
 }
-
-document.getElementById("copy-button").onclick =  function (){
-    copyToClipboard()
-};

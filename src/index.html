@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,11 +7,16 @@
     <script src="https://kit.fontawesome.com/d5d2ab0e69.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="txt-content"></div>
-    <button id="copy-button"><i class="fa-solid fa-copy"></i></button>  
+    <div class="d-flex justify-content-center mt-3">
+      <h1>concatinator</h1>
+    </div>
 
+    <div class="wrapper" onclick="copyToClipboard()">
+      <p class="copy-button"><i class="fa-solid fa-copy"></i> Copy to Clipoard</p>
+      <code id="txt-content"></code>
+    </div>
 
     <script src="assets/js/pasteConcat.js"></script>
-    <script type="method" src="assets/js/copyButton.js"></script>
+    <script src="assets/js/copyButton.js"></script>
   </body>
 </html>
