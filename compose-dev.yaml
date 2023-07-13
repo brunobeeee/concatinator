@@ -6,9 +6,8 @@ services:
       context: .
       target: runner
     entrypoint:
-      - sh
-      - -c
-      - cd /com.docker.devenvironments.code && npm run dev
+      - sleep
+      - infinity
     ports:
       - 1234:1234
 
