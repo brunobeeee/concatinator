@@ -1,43 +1,43 @@
 @import "abstracts/variables";
-@import "~bootstrap/scss/bootstrap"; 
+@import "~bootstrap/scss/bootstrap";
 @import "~@fontsource/jost/scss/mixins.scss";
 
-:root{
-    --bs-body-font-family: 'Jost', 'Avenir', sans-serif;
+:root {
+  --bs-body-font-family: "Jost", "Avenir", sans-serif;
 }
 
 body {
-    background-color: $dark;
-    h1 {
-      color: $light;
+  background-color: $dark;
+  h1 {
+    color: $light;
+    padding-right: 1em; // push the h1 a little to the left to make it seem centered
+  }
+
+  .wrapper {
+    background-color: $light;
+    border-radius: 0.5em;
+    margin: 0 auto;
+    padding: 10px 20px;
+    max-width: 1000px;
+    flex: 1 1 200px;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      background-color: rgba($light, 0.75);
     }
 
-    .wrapper {
-      background-color: $light;
-      border-radius: .5em;
-      margin: 3em auto;
-      padding: 10px 20px;
-      max-width: 1000px;
-      flex: 1 1 200px;
-      position: relative;
-      &:hover {
-        cursor: pointer;
-      }
-      &:active {
-        background-color: rgba($light,.75);
-      }
+    .copy-button {
+      position: absolute;
+      right: 10px;
+      color: $muted;
+    }
 
-      .copy-button {
-        position: absolute;
-        right: 10px;
-        color: $muted;
-      }
-
-      #txt-content {
-        color: $dark;
-        white-space: pre-wrap;
-        font-family: "Menlo", monospace, sans-serif;
-      }
+    #txt-content {
+      color: $dark;
+      white-space: pre-wrap;
+      font-family: "Menlo", monospace, sans-serif;
     }
   }
-  
+}
