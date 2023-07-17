@@ -1,5 +1,5 @@
 # concatinator
-Concatenate multiple files into one and display the output on a webserver `localhost:1234`.
+Concatenate multiple files into one and display the output on a Parcel dev server `localhost:1234`.
 
 ## Getting started
 
