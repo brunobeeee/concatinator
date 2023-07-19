@@ -5,7 +5,7 @@ const path = require('path');
 const mergeFiles = require('merge-files');
 const getFilePaths = require('./getFilePaths');
 
-const inputFolderPath = '/com.docker.devenvironments.code/IO/input';
+const inputFolderPath = '/com.docker.devenvironments.code/input';
 const outputPath = '/com.docker.devenvironments.code/dist/concat-result.txt'; // paste into dist folder to make it accessible for pasteConcat.js
 
 // get absolute file paths of the input files
